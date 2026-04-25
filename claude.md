@@ -455,3 +455,10 @@ It should not try to be a full assistant on day one.
 If the product nails one sentence, it has a real chance:
 
 **After you see someone, jot one messy note. Before you see them again, Noted helps you remember what matters.**
+
+## Development workflow instructions
+
+- Any change that is working properly after testing should be committed and pushed with a clear, descriptive commit message.
+- Always use the components and assets from the project. Do not introduce ad-hoc replacements or external substitutes.
+- If an asset is missing, always ask for it before proceeding. Do not invent or fabricate assets.
+- If there is a discrepancy in a component (e.g. mismatched naming, props, styling, or behavior versus what the project defines), flag it explicitly rather than silently working around it.
