@@ -1,0 +1,1447 @@
+<title>Marginalia Colour Tokens</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/*
+ * Marginalia - colour tokens
+ *
+ * GENERATED FILE. Edit scripts/generate_color_tokens.py and re-run
+ * `python3 scripts/generate_color_tokens.py`; do not edit this by hand.
+ *
+ * Layer 1 (primitives) is the palette: every ramp step, named by hue and
+ * weight. Components must never reference these directly.
+ * Layer 2 (semantic) is the vocabulary: what a colour is *for*. Components
+ * reference only these, which is what lets the theme swap underneath without
+ * a single component changing.
+ */
+
+:root {
+  /* ---- Primitives: ramps ---- */
+
+  /* neutral */
+  --color-neutral-50: #FEFDF9;
+  --color-neutral-100: #EEEDE8;
+  --color-neutral-200: #DEDCD7;
+  --color-neutral-300: #C9C7C2;
+  --color-neutral-400: #AEACA6;
+  --color-neutral-500: #95948E;
+  --color-neutral-600: #7D7C76;
+  --color-neutral-700: #66655F;
+  --color-neutral-800: #504E4A;
+  --color-neutral-900: #383733;
+  --color-neutral-950: #181818;
+
+  /* ultramarine */
+  --color-ultramarine-50: #F3F7FF;
+  --color-ultramarine-100: #E6EDFF;
+  --color-ultramarine-200: #CFDCFF;
+  --color-ultramarine-300: #B1C6FF;
+  --color-ultramarine-400: #8CA8FD;
+  --color-ultramarine-500: #6D8CF3;
+  --color-ultramarine-600: #5270E5;
+  --color-ultramarine-700: #3046C5;
+  --color-ultramarine-800: #293DB1;
+  --color-ultramarine-900: #1A2883;
+  --color-ultramarine-950: #0E175C;
+
+  /* orange */
+  --color-orange-50: #FFF4F1;
+  --color-orange-100: #FFE7DF;
+  --color-orange-200: #FFD0C2;
+  --color-orange-300: #FFB19A;
+  --color-orange-400: #FF845F;
+  --color-orange-500: #FF5A1F;
+  --color-orange-600: #D54201;
+  --color-orange-700: #AF3400;
+  --color-orange-800: #8A2700;
+  --color-orange-900: #631900;
+  --color-orange-950: #420E00;
+
+  /* ---- Primitives: transparent shades ---- */
+  --color-shadow-4: rgba(24, 24, 24, 0.04);
+  --color-shadow-6: rgba(24, 24, 24, 0.06);
+  --color-shadow-8: rgba(24, 24, 24, 0.08);
+  --color-shadow-12: rgba(24, 24, 24, 0.12);
+  --color-shadow-16: rgba(24, 24, 24, 0.16);
+  --color-shadow-24: rgba(24, 24, 24, 0.24);
+  --color-scrim-40: rgba(24, 24, 24, 0.4);
+  --color-scrim-60: rgba(24, 24, 24, 0.6);
+  --color-scrim-80: rgba(24, 24, 24, 0.8);
+  --color-highlight-8: rgba(254, 253, 249, 0.08);
+  --color-highlight-16: rgba(254, 253, 249, 0.16);
+  --color-highlight-24: rgba(254, 253, 249, 0.24);
+  --color-ultramarine-8: rgba(48, 70, 197, 0.08);
+  --color-ultramarine-12: rgba(48, 70, 197, 0.12);
+  --color-ultramarine-24: rgba(48, 70, 197, 0.24);
+  --color-orange-8: rgba(255, 90, 31, 0.08);
+  --color-orange-12: rgba(255, 90, 31, 0.12);
+  --color-orange-24: rgba(255, 90, 31, 0.24);
+
+  /* ---- Source-colour aliases ---- */
+  --color-light: var(--color-neutral-50);
+  --color-dark: var(--color-neutral-950);
+  --color-ultramarine: var(--color-ultramarine-700);
+  --color-orange: var(--color-orange-500);
+}
+
+/* ==== Semantic tokens - light theme (default) ==== */
+:root,
+[data-theme="light"] {
+
+  /* Backgrounds */
+  --color-bg-canvas: var(--color-neutral-50);
+  --color-bg-subtle: var(--color-neutral-100);
+  --color-bg-muted: var(--color-neutral-200);
+  --color-bg-inverse: var(--color-neutral-950);
+
+  /* Surfaces */
+  --color-surface-default: var(--color-neutral-50);
+  --color-surface-raised: var(--color-neutral-50);
+  --color-surface-sunken: var(--color-neutral-100);
+  --color-surface-overlay: var(--color-neutral-50);
+
+  /* Text */
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-800);
+  --color-text-tertiary: var(--color-neutral-700);
+  --color-text-disabled: var(--color-neutral-500);
+  --color-text-inverse: var(--color-neutral-50);
+  --color-text-on-brand: var(--color-neutral-50);
+  --color-text-on-accent: var(--color-neutral-950);
+  --color-text-brand: var(--color-ultramarine-700);
+  --color-text-accent: var(--color-orange-700);
+
+  /* Borders */
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-default: var(--color-neutral-300);
+  --color-border-strong: var(--color-neutral-600);
+  --color-border-brand: var(--color-ultramarine-700);
+
+  /* Brand - ultramarine */
+  --color-brand-default: var(--color-ultramarine-700);
+  --color-brand-hover: var(--color-ultramarine-800);
+  --color-brand-active: var(--color-ultramarine-900);
+  --color-brand-subtle: var(--color-ultramarine-50);
+  --color-brand-subtle-hover: var(--color-ultramarine-100);
+  --color-brand-muted: var(--color-ultramarine-200);
+  --color-brand-disabled: var(--color-ultramarine-200);
+
+  /* Accent - orange */
+  --color-accent-default: var(--color-orange-500);
+  --color-accent-hover: var(--color-orange-400);
+  --color-accent-active: var(--color-orange-300);
+  --color-accent-subtle: var(--color-orange-50);
+  --color-accent-subtle-hover: var(--color-orange-100);
+  --color-accent-muted: var(--color-orange-200);
+
+  /* Shading */
+  --color-shadow-ambient: var(--color-shadow-6);
+  --color-shadow-key: var(--color-shadow-12);
+  --color-scrim: var(--color-scrim-60);
+  --color-overlay-hover: var(--color-shadow-4);
+  --color-overlay-active: var(--color-shadow-8);
+  --color-bevel-highlight: var(--color-highlight-16);
+  --color-focus-ring: var(--color-ultramarine-24);
+  --color-selection: var(--color-ultramarine-12);
+}
+
+/* ==== Semantic tokens - dark theme ==== */
+[data-theme="dark"] {
+
+  /* Backgrounds */
+  --color-bg-canvas: var(--color-neutral-950);
+  --color-bg-subtle: var(--color-neutral-900);
+  --color-bg-muted: var(--color-neutral-800);
+  --color-bg-inverse: var(--color-neutral-50);
+
+  /* Surfaces */
+  --color-surface-default: var(--color-neutral-900);
+  --color-surface-raised: var(--color-neutral-800);
+  --color-surface-sunken: var(--color-neutral-950);
+  --color-surface-overlay: var(--color-neutral-800);
+
+  /* Text */
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-disabled: var(--color-neutral-600);
+  --color-text-inverse: var(--color-neutral-950);
+  --color-text-on-brand: var(--color-neutral-950);
+  --color-text-on-accent: var(--color-neutral-950);
+  --color-text-brand: var(--color-ultramarine-400);
+  --color-text-accent: var(--color-orange-400);
+
+  /* Borders */
+  --color-border-subtle: var(--color-neutral-800);
+  --color-border-default: var(--color-neutral-700);
+  --color-border-strong: var(--color-neutral-400);
+  --color-border-brand: var(--color-ultramarine-500);
+
+  /* Brand - ultramarine */
+  --color-brand-default: var(--color-ultramarine-500);
+  --color-brand-hover: var(--color-ultramarine-400);
+  --color-brand-active: var(--color-ultramarine-300);
+  --color-brand-subtle: var(--color-ultramarine-950);
+  --color-brand-subtle-hover: var(--color-ultramarine-900);
+  --color-brand-muted: var(--color-ultramarine-800);
+  --color-brand-disabled: var(--color-ultramarine-900);
+
+  /* Accent - orange */
+  --color-accent-default: var(--color-orange-400);
+  --color-accent-hover: var(--color-orange-300);
+  --color-accent-active: var(--color-orange-200);
+  --color-accent-subtle: var(--color-orange-950);
+  --color-accent-subtle-hover: var(--color-orange-900);
+  --color-accent-muted: var(--color-orange-800);
+
+  /* Shading */
+  --color-shadow-ambient: var(--color-shadow-16);
+  --color-shadow-key: var(--color-shadow-24);
+  --color-scrim: var(--color-scrim-80);
+  --color-overlay-hover: var(--color-highlight-8);
+  --color-overlay-active: var(--color-highlight-16);
+  --color-bevel-highlight: var(--color-highlight-8);
+  --color-focus-ring: var(--color-ultramarine-24);
+  --color-selection: var(--color-ultramarine-24);
+}
+
+/* Follow the OS when the page has made no explicit choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+
+    /* Backgrounds */
+    --color-bg-canvas: var(--color-neutral-950);
+    --color-bg-subtle: var(--color-neutral-900);
+    --color-bg-muted: var(--color-neutral-800);
+    --color-bg-inverse: var(--color-neutral-50);
+
+    /* Surfaces */
+    --color-surface-default: var(--color-neutral-900);
+    --color-surface-raised: var(--color-neutral-800);
+    --color-surface-sunken: var(--color-neutral-950);
+    --color-surface-overlay: var(--color-neutral-800);
+
+    /* Text */
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-300);
+    --color-text-tertiary: var(--color-neutral-400);
+    --color-text-disabled: var(--color-neutral-600);
+    --color-text-inverse: var(--color-neutral-950);
+    --color-text-on-brand: var(--color-neutral-950);
+    --color-text-on-accent: var(--color-neutral-950);
+    --color-text-brand: var(--color-ultramarine-400);
+    --color-text-accent: var(--color-orange-400);
+
+    /* Borders */
+    --color-border-subtle: var(--color-neutral-800);
+    --color-border-default: var(--color-neutral-700);
+    --color-border-strong: var(--color-neutral-400);
+    --color-border-brand: var(--color-ultramarine-500);
+
+    /* Brand - ultramarine */
+    --color-brand-default: var(--color-ultramarine-500);
+    --color-brand-hover: var(--color-ultramarine-400);
+    --color-brand-active: var(--color-ultramarine-300);
+    --color-brand-subtle: var(--color-ultramarine-950);
+    --color-brand-subtle-hover: var(--color-ultramarine-900);
+    --color-brand-muted: var(--color-ultramarine-800);
+    --color-brand-disabled: var(--color-ultramarine-900);
+
+    /* Accent - orange */
+    --color-accent-default: var(--color-orange-400);
+    --color-accent-hover: var(--color-orange-300);
+    --color-accent-active: var(--color-orange-200);
+    --color-accent-subtle: var(--color-orange-950);
+    --color-accent-subtle-hover: var(--color-orange-900);
+    --color-accent-muted: var(--color-orange-800);
+
+    /* Shading */
+    --color-shadow-ambient: var(--color-shadow-16);
+    --color-shadow-key: var(--color-shadow-24);
+    --color-scrim: var(--color-scrim-80);
+    --color-overlay-hover: var(--color-highlight-8);
+    --color-overlay-active: var(--color-highlight-16);
+    --color-bevel-highlight: var(--color-highlight-8);
+    --color-focus-ring: var(--color-ultramarine-24);
+    --color-selection: var(--color-ultramarine-24);
+  }
+}
+
+/* ==== Elevation, composed from the shading tokens ==== */
+:root {
+  --shadow-xs: 0 1px 2px 0 var(--color-shadow-ambient);
+  --shadow-sm: 0 1px 2px 0 var(--color-shadow-key), 0 2px 4px -1px var(--color-shadow-ambient);
+  --shadow-md: 0 2px 4px -1px var(--color-shadow-key), 0 6px 12px -2px var(--color-shadow-ambient);
+  --shadow-lg: 0 4px 8px -2px var(--color-shadow-key), 0 12px 24px -4px var(--color-shadow-ambient);
+  --shadow-xl: 0 8px 16px -4px var(--color-shadow-key), 0 24px 48px -8px var(--color-shadow-ambient);
+}
+
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 32px 96px; }
+
+/* ---- type ---- */
+h1, h2, h3 { font-family: Newsreader, Georgia, serif; font-weight: 500; text-wrap: balance; margin: 0; }
+h1 { font-size: 56px; line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-size: 30px; line-height: 1.2; letter-spacing: -0.01em; }
+h3 { font-size: 19px; line-height: 1.3; }
+p { margin: 0; max-width: 66ch; }
+.prose { font-family: Newsreader, Georgia, serif; font-size: 18px; line-height: 1.65; color: var(--color-text-secondary); }
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--color-text-tertiary);
+}
+code, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+/* ---- chrome ---- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 24px;
+  padding: 12px 32px;
+  background: var(--color-bg-canvas);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.topbar .brand { font-family: Newsreader, Georgia, serif; font-size: 18px; }
+.topbar nav { display: flex; gap: 20px; margin-left: auto; flex-wrap: wrap; }
+.topbar nav a {
+  font-size: 13px; color: var(--color-text-tertiary); text-decoration: none;
+  border-bottom: 1px solid transparent; padding-bottom: 2px;
+}
+.topbar nav a:hover { color: var(--color-text-brand); border-bottom-color: var(--color-border-brand); }
+
+.toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: "IBM Plex Mono", monospace; font-size: 12px;
+  padding: 7px 13px; cursor: pointer;
+  color: var(--color-text-secondary);
+  background: var(--color-surface-default);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 2px;
+}
+.toggle:hover { background: var(--color-bg-subtle); color: var(--color-text-primary); }
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-border-brand);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-focus-ring);
+  border-radius: 2px;
+}
+
+/* ---- sections ---- */
+section { padding-top: 72px; scroll-margin-top: 64px; }
+.section-head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.rule { height: 1px; background: var(--color-border-subtle); margin: 0; border: 0; }
+
+/* ---- masthead ---- */
+.masthead { padding: 72px 0 8px; display: flex; flex-direction: column; gap: 22px; }
+.sources { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; }
+.source { border: 1px solid var(--color-border-default); border-radius: 3px; overflow: hidden; }
+.source .chip { height: 108px; }
+.source .meta { padding: 12px 14px; display: flex; flex-direction: column; gap: 3px; background: var(--color-surface-default); }
+.source .name { font-size: 15px; font-weight: 500; }
+.source .hex { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--color-text-tertiary); }
+.source .role { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-tertiary); font-family: "IBM Plex Mono", monospace; }
+
+/* ---- ramp matrix ---- */
+.matrix-scroll { overflow-x: auto; padding-bottom: 6px; }
+.matrix { min-width: 900px; display: flex; flex-direction: column; gap: 18px; }
+.matrix-header { display: grid; grid-template-columns: 116px repeat(11, 1fr); gap: 4px; }
+.matrix-header span {
+  font-family: "IBM Plex Mono", monospace; font-size: 11px;
+  color: var(--color-text-tertiary); text-align: center;
+}
+.ramp { display: grid; grid-template-columns: 116px repeat(11, 1fr); gap: 4px; align-items: stretch; }
+.ramp-label { display: flex; flex-direction: column; justify-content: center; gap: 2px; padding-right: 10px; }
+.ramp-label .n { font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 500; }
+.ramp-label .h { font-family: "IBM Plex Mono", monospace; font-size: 10px; color: var(--color-text-tertiary); }
+.swatch {
+  height: 74px; border-radius: 2px; padding: 7px 8px;
+  /* Inset rather than a border or outline: pale swatches need an edge against
+     the cream ground, and an outline on the last column clips at the scroll. */
+  box-shadow: inset 0 0 0 1px var(--color-border-default);
+  display: flex; flex-direction: column; justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace; font-size: 10px; line-height: 1.3;
+}
+.swatch .val { opacity: 0.82; }
+.swatch.is-source { box-shadow: inset 0 0 0 3px var(--color-text-accent); }
+.swatch .pin { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* ---- token tables ---- */
+.tbl-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 13.5px; }
+caption {
+  text-align: left; font-size: 13px; font-weight: 600; padding: 22px 0 8px;
+  color: var(--color-text-primary);
+}
+th {
+  text-align: left; font-weight: 500; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--color-text-tertiary);
+  font-family: "IBM Plex Mono", monospace;
+  padding: 8px 12px 8px 0; border-bottom: 1px solid var(--color-border-default);
+}
+td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: middle; }
+td.num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+.dot {
+  display: inline-block; width: 26px; height: 26px; border-radius: 2px;
+  border: 1px solid var(--color-border-default); vertical-align: middle;
+}
+.tok { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; }
+.ref { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--color-text-tertiary); }
+.use { color: var(--color-text-secondary); }
+
+.pill {
+  display: inline-block; font-family: "IBM Plex Mono", monospace;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 2px;
+}
+.pill.pass { background: var(--color-brand-subtle); color: var(--color-text-brand); }
+.pill.info { background: var(--color-bg-muted); color: var(--color-text-tertiary); }
+
+/* ---- demos ---- */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+.panel {
+  background: var(--color-surface-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: 3px; padding: 22px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.panel h3 { font-family: "IBM Plex Sans", sans-serif; font-size: 12px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-tertiary); }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+.btn {
+  font: 500 14px/1 "IBM Plex Sans", sans-serif;
+  padding: 10px 16px; border-radius: 2px; border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-brand { background: var(--color-brand-default); color: var(--color-text-on-brand); }
+.btn-brand.h { background: var(--color-brand-hover); }
+.btn-brand.a { background: var(--color-brand-active); }
+.btn-brand.d { background: var(--color-brand-disabled); color: var(--color-text-disabled); cursor: not-allowed; }
+.btn-accent { background: var(--color-accent-default); color: var(--color-text-on-accent); }
+.btn-accent.h { background: var(--color-accent-hover); }
+.btn-accent.a { background: var(--color-accent-active); }
+.btn-ghost { background: transparent; color: var(--color-text-primary); border-color: var(--color-border-strong); }
+.btn-ghost:hover { background: var(--color-overlay-hover); }
+.btn-ghost:active { background: var(--color-overlay-active); }
+.btn-live:hover { background: var(--color-brand-hover); }
+.btn-live:active { background: var(--color-brand-active); }
+
+.field {
+  font: 400 14px/1 "IBM Plex Sans", sans-serif;
+  padding: 10px 12px; border-radius: 2px;
+  background: var(--color-bg-canvas); color: var(--color-text-primary);
+  border: 1px solid var(--color-border-strong); width: 100%;
+}
+.field::placeholder { color: var(--color-text-tertiary); }
+.field:focus-visible { outline: 2px solid var(--color-border-brand); outline-offset: 1px; }
+
+.tag { font: 500 12px/1 "IBM Plex Mono", monospace; padding: 5px 9px; border-radius: 2px; }
+.tag.brand { background: var(--color-brand-muted); color: var(--color-text-primary); }
+.tag.accent { background: var(--color-accent-muted); color: var(--color-text-primary); }
+.tooltip { background: var(--color-bg-inverse); color: var(--color-text-inverse); padding: 6px 10px; border-radius: 2px; font-size: 12.5px; }
+a.link { color: var(--color-text-brand); text-underline-offset: 3px; }
+::selection { background: var(--color-selection); }
+
+.elevation { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 18px; }
+.card {
+  background: var(--color-surface-raised); border-radius: 3px; padding: 18px 14px;
+  border-top: 1px solid var(--color-bevel-highlight);
+  font-family: "IBM Plex Mono", monospace; font-size: 12px; text-align: center;
+  color: var(--color-text-secondary);
+}
+.scrim-demo { position: relative; border-radius: 3px; overflow: hidden; border: 1px solid var(--color-border-default); }
+.scrim-demo .under {
+  padding: 26px 22px; min-height: 148px; background: var(--color-bg-subtle);
+  font-family: Newsreader, Georgia, serif; font-size: 17px; line-height: 1.55;
+  color: var(--color-text-primary);
+}
+.scrim-demo .over {
+  position: absolute; inset: 0; background: var(--color-scrim);
+  /* Bottom-left, so the caption never lands on the text it is dimming. */
+  display: flex; align-items: flex-end; padding: 14px 16px;
+  font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--color-neutral-50);
+}
+
+footer { margin-top: 88px; padding-top: 26px; border-top: 1px solid var(--color-border-subtle);
+  font-size: 13px; color: var(--color-text-tertiary); display: flex; flex-direction: column; gap: 6px; }
+
+@media (max-width: 720px) {
+  .wrap { padding: 0 20px 64px; }
+  h1 { font-size: 40px; }
+  .sources { grid-template-columns: repeat(2, 1fr); }
+  .topbar nav { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+</style>
+<div class="topbar">
+<span class="brand">Marginalia</span>
+<nav>
+<a href="#ramps">Ramps</a>
+<a href="#semantic">Semantic</a>
+<a href="#shading">Shading</a>
+<a href="#components">Components</a>
+<a href="#contrast">Contrast</a>
+</nav>
+<button class="toggle" id="theme-toggle" type="button"><span id="theme-label">Light</span></button>
+</div>
+<div class="wrap">
+<header class="masthead">
+<span class="eyebrow">Design system · Colour</span>
+<h1>Four colours, every shade derived.</h1>
+<p class="prose">Every value in this system comes from four source colours and nothing else. The ramps are generated in OKLCH — hue held constant, lightness on one shared grid, chroma falling away from the source in both directions — so a step means the same thing on every ramp. This page is built out of the tokens it documents; switch the theme and it re-resolves along with everything else.</p>
+<div class="sources">
+<div class="source">
+<div class="chip" style="background:#FEFDF9"></div>
+<div class="meta">
+<span class="role">Paper</span>
+<span class="name">Light</span>
+<span class="hex">#FEFDF9 · neutral-50</span>
+</div></div>
+<div class="source">
+<div class="chip" style="background:#3046C5"></div>
+<div class="meta">
+<span class="role">Brand</span>
+<span class="name">Ultramarine</span>
+<span class="hex">#3046C5 · ultramarine-700</span>
+</div></div>
+<div class="source">
+<div class="chip" style="background:#FF5A1F"></div>
+<div class="meta">
+<span class="role">Accent</span>
+<span class="name">Orange</span>
+<span class="hex">#FF5A1F · orange-500</span>
+</div></div>
+<div class="source">
+<div class="chip" style="background:#181818"></div>
+<div class="meta">
+<span class="role">Ink</span>
+<span class="name">Dark</span>
+<span class="hex">#181818 · neutral-950</span>
+</div></div>
+</div></header>
+<section id="ramps"><div class="section-head">
+<span class="eyebrow">01 · Primitives</span>
+<h2>The ramps</h2>
+<p class="prose">Read this as a matrix. Every column is one weight, and because all three ramps sit on the same lightness grid, a swatch is always the same visual weight as the one above and below it — which is what lets you recolour a component from neutral to brand without it getting heavier or lighter. Outlined swatches are the source colours, pinned exactly.</p>
+</div>
+<div class="matrix-scroll"><div class="matrix">
+<div class="matrix-header"><span></span>
+<span>50</span>
+<span>100</span>
+<span>200</span>
+<span>300</span>
+<span>400</span>
+<span>500</span>
+<span>600</span>
+<span>700</span>
+<span>800</span>
+<span>900</span>
+<span>950</span>
+</div>
+<div class="ramp">
+<div class="ramp-label">
+<span class="n">neutral</span>
+<span class="h">warm grey</span>
+</div>
+<div class="swatch is-source" style="background:#FEFDF9;color:#181818">
+<span class="pin">source</span>
+<span class="val">#FEFDF9</span>
+</div>
+<div class="swatch" style="background:#EEEDE8;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#EEEDE8</span>
+</div>
+<div class="swatch" style="background:#DEDCD7;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#DEDCD7</span>
+</div>
+<div class="swatch" style="background:#C9C7C2;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#C9C7C2</span>
+</div>
+<div class="swatch" style="background:#AEACA6;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#AEACA6</span>
+</div>
+<div class="swatch" style="background:#95948E;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#95948E</span>
+</div>
+<div class="swatch" style="background:#7D7C76;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#7D7C76</span>
+</div>
+<div class="swatch" style="background:#66655F;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#66655F</span>
+</div>
+<div class="swatch" style="background:#504E4A;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#504E4A</span>
+</div>
+<div class="swatch" style="background:#383733;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#383733</span>
+</div>
+<div class="swatch is-source" style="background:#181818;color:#FEFDF9">
+<span class="pin">source</span>
+<span class="val">#181818</span>
+</div>
+</div>
+<div class="ramp">
+<div class="ramp-label">
+<span class="n">ultramarine</span>
+<span class="h">hue 269°</span>
+</div>
+<div class="swatch" style="background:#F3F7FF;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#F3F7FF</span>
+</div>
+<div class="swatch" style="background:#E6EDFF;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#E6EDFF</span>
+</div>
+<div class="swatch" style="background:#CFDCFF;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#CFDCFF</span>
+</div>
+<div class="swatch" style="background:#B1C6FF;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#B1C6FF</span>
+</div>
+<div class="swatch" style="background:#8CA8FD;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#8CA8FD</span>
+</div>
+<div class="swatch" style="background:#6D8CF3;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#6D8CF3</span>
+</div>
+<div class="swatch" style="background:#5270E5;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#5270E5</span>
+</div>
+<div class="swatch is-source" style="background:#3046C5;color:#FEFDF9">
+<span class="pin">source</span>
+<span class="val">#3046C5</span>
+</div>
+<div class="swatch" style="background:#293DB1;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#293DB1</span>
+</div>
+<div class="swatch" style="background:#1A2883;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#1A2883</span>
+</div>
+<div class="swatch" style="background:#0E175C;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#0E175C</span>
+</div>
+</div>
+<div class="ramp">
+<div class="ramp-label">
+<span class="n">orange</span>
+<span class="h">hue 38°</span>
+</div>
+<div class="swatch" style="background:#FFF4F1;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#FFF4F1</span>
+</div>
+<div class="swatch" style="background:#FFE7DF;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#FFE7DF</span>
+</div>
+<div class="swatch" style="background:#FFD0C2;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#FFD0C2</span>
+</div>
+<div class="swatch" style="background:#FFB19A;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#FFB19A</span>
+</div>
+<div class="swatch" style="background:#FF845F;color:#181818">
+<span class="pin">&nbsp;</span>
+<span class="val">#FF845F</span>
+</div>
+<div class="swatch is-source" style="background:#FF5A1F;color:#181818">
+<span class="pin">source</span>
+<span class="val">#FF5A1F</span>
+</div>
+<div class="swatch" style="background:#D54201;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#D54201</span>
+</div>
+<div class="swatch" style="background:#AF3400;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#AF3400</span>
+</div>
+<div class="swatch" style="background:#8A2700;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#8A2700</span>
+</div>
+<div class="swatch" style="background:#631900;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#631900</span>
+</div>
+<div class="swatch" style="background:#420E00;color:#FEFDF9">
+<span class="pin">&nbsp;</span>
+<span class="val">#420E00</span>
+</div>
+</div>
+</div></div>
+<div class="tbl-scroll"><table>
+<caption>Transparent shades — for effects that sit over an unknown surface</caption>
+<tr><th>Token</th><th>Built from</th><th>Value</th></tr>
+<tr>
+<td class="tok">--color-shadow-4</td>
+<td class="ref">neutral-950 @ 4%</td>
+<td class="num">rgba(24, 24, 24, 0.04)</td>
+</tr>
+<tr>
+<td class="tok">--color-shadow-6</td>
+<td class="ref">neutral-950 @ 6%</td>
+<td class="num">rgba(24, 24, 24, 0.06)</td>
+</tr>
+<tr>
+<td class="tok">--color-shadow-8</td>
+<td class="ref">neutral-950 @ 8%</td>
+<td class="num">rgba(24, 24, 24, 0.08)</td>
+</tr>
+<tr>
+<td class="tok">--color-shadow-12</td>
+<td class="ref">neutral-950 @ 12%</td>
+<td class="num">rgba(24, 24, 24, 0.12)</td>
+</tr>
+<tr>
+<td class="tok">--color-shadow-16</td>
+<td class="ref">neutral-950 @ 16%</td>
+<td class="num">rgba(24, 24, 24, 0.16)</td>
+</tr>
+<tr>
+<td class="tok">--color-shadow-24</td>
+<td class="ref">neutral-950 @ 24%</td>
+<td class="num">rgba(24, 24, 24, 0.24)</td>
+</tr>
+<tr>
+<td class="tok">--color-scrim-40</td>
+<td class="ref">neutral-950 @ 40%</td>
+<td class="num">rgba(24, 24, 24, 0.4)</td>
+</tr>
+<tr>
+<td class="tok">--color-scrim-60</td>
+<td class="ref">neutral-950 @ 60%</td>
+<td class="num">rgba(24, 24, 24, 0.6)</td>
+</tr>
+<tr>
+<td class="tok">--color-scrim-80</td>
+<td class="ref">neutral-950 @ 80%</td>
+<td class="num">rgba(24, 24, 24, 0.8)</td>
+</tr>
+<tr>
+<td class="tok">--color-highlight-8</td>
+<td class="ref">neutral-50 @ 8%</td>
+<td class="num">rgba(254, 253, 249, 0.08)</td>
+</tr>
+<tr>
+<td class="tok">--color-highlight-16</td>
+<td class="ref">neutral-50 @ 16%</td>
+<td class="num">rgba(254, 253, 249, 0.16)</td>
+</tr>
+<tr>
+<td class="tok">--color-highlight-24</td>
+<td class="ref">neutral-50 @ 24%</td>
+<td class="num">rgba(254, 253, 249, 0.24)</td>
+</tr>
+<tr>
+<td class="tok">--color-ultramarine-8</td>
+<td class="ref">ultramarine-700 @ 8%</td>
+<td class="num">rgba(48, 70, 197, 0.08)</td>
+</tr>
+<tr>
+<td class="tok">--color-ultramarine-12</td>
+<td class="ref">ultramarine-700 @ 12%</td>
+<td class="num">rgba(48, 70, 197, 0.12)</td>
+</tr>
+<tr>
+<td class="tok">--color-ultramarine-24</td>
+<td class="ref">ultramarine-700 @ 24%</td>
+<td class="num">rgba(48, 70, 197, 0.24)</td>
+</tr>
+<tr>
+<td class="tok">--color-orange-8</td>
+<td class="ref">orange-500 @ 8%</td>
+<td class="num">rgba(255, 90, 31, 0.08)</td>
+</tr>
+<tr>
+<td class="tok">--color-orange-12</td>
+<td class="ref">orange-500 @ 12%</td>
+<td class="num">rgba(255, 90, 31, 0.12)</td>
+</tr>
+<tr>
+<td class="tok">--color-orange-24</td>
+<td class="ref">orange-500 @ 24%</td>
+<td class="num">rgba(255, 90, 31, 0.24)</td>
+</tr>
+</table></div></section>
+<section id="semantic"><div class="section-head">
+<span class="eyebrow">02 · Semantic</span>
+<h2>What a colour is for</h2>
+<p class="prose">Components reference only these. Each one points at a different primitive per theme, so a theme switch rebinds the whole vocabulary at once and no component changes. The swatch column is live — it shows whichever value is resolving right now.</p>
+</div>
+<div class="tbl-scroll"><table>
+<caption>Backgrounds</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-bg-canvas)"></span></td>
+<td class="tok">--color-bg-canvas</td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="use">Page background</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-bg-subtle)"></span></td>
+<td class="tok">--color-bg-subtle</td>
+<td class="ref">neutral-100 <span class="num">#EEEDE8</span></td>
+<td class="ref">neutral-900 <span class="num">#383733</span></td>
+<td class="use">Recessed areas, table stripes, code blocks</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-bg-muted)"></span></td>
+<td class="tok">--color-bg-muted</td>
+<td class="ref">neutral-200 <span class="num">#DEDCD7</span></td>
+<td class="ref">neutral-800 <span class="num">#504E4A</span></td>
+<td class="use">Disabled fills, inactive tabs</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-bg-inverse)"></span></td>
+<td class="tok">--color-bg-inverse</td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="use">Tooltips and other deliberately inverted surfaces</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Surfaces</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-surface-default)"></span></td>
+<td class="tok">--color-surface-default</td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="ref">neutral-900 <span class="num">#383733</span></td>
+<td class="use">Cards, panels, sheets</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-surface-raised)"></span></td>
+<td class="tok">--color-surface-raised</td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="ref">neutral-800 <span class="num">#504E4A</span></td>
+<td class="use">Menus, popovers, anything above a card</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-surface-sunken)"></span></td>
+<td class="tok">--color-surface-sunken</td>
+<td class="ref">neutral-100 <span class="num">#EEEDE8</span></td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="use">Wells and inset areas</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-surface-overlay)"></span></td>
+<td class="tok">--color-surface-overlay</td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="ref">neutral-800 <span class="num">#504E4A</span></td>
+<td class="use">Modals and dialogs</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Text</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-primary)"></span></td>
+<td class="tok">--color-text-primary</td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="use">Body copy and headings</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-secondary)"></span></td>
+<td class="tok">--color-text-secondary</td>
+<td class="ref">neutral-800 <span class="num">#504E4A</span></td>
+<td class="ref">neutral-300 <span class="num">#C9C7C2</span></td>
+<td class="use">Supporting copy, labels</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-tertiary)"></span></td>
+<td class="tok">--color-text-tertiary</td>
+<td class="ref">neutral-700 <span class="num">#66655F</span></td>
+<td class="ref">neutral-400 <span class="num">#AEACA6</span></td>
+<td class="use">Captions, metadata, placeholders</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-disabled)"></span></td>
+<td class="tok">--color-text-disabled</td>
+<td class="ref">neutral-500 <span class="num">#95948E</span></td>
+<td class="ref">neutral-600 <span class="num">#7D7C76</span></td>
+<td class="use">Non-interactive text; deliberately below AA</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-inverse)"></span></td>
+<td class="tok">--color-text-inverse</td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="use">Text on bg-inverse</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-on-brand)"></span></td>
+<td class="tok">--color-text-on-brand</td>
+<td class="ref">neutral-50 <span class="num">#FEFDF9</span></td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="use">Text on a filled brand surface</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-on-accent)"></span></td>
+<td class="tok">--color-text-on-accent</td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="ref">neutral-950 <span class="num">#181818</span></td>
+<td class="use">Text on a filled accent surface</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-brand)"></span></td>
+<td class="tok">--color-text-brand</td>
+<td class="ref">ultramarine-700 <span class="num">#3046C5</span></td>
+<td class="ref">ultramarine-400 <span class="num">#8CA8FD</span></td>
+<td class="use">Links and brand-coloured text</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-text-accent)"></span></td>
+<td class="tok">--color-text-accent</td>
+<td class="ref">orange-700 <span class="num">#AF3400</span></td>
+<td class="ref">orange-400 <span class="num">#FF845F</span></td>
+<td class="use">Accent-coloured text</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Borders</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-border-subtle)"></span></td>
+<td class="tok">--color-border-subtle</td>
+<td class="ref">neutral-200 <span class="num">#DEDCD7</span></td>
+<td class="ref">neutral-800 <span class="num">#504E4A</span></td>
+<td class="use">Dividers and hairlines; decorative only</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-border-default)"></span></td>
+<td class="tok">--color-border-default</td>
+<td class="ref">neutral-300 <span class="num">#C9C7C2</span></td>
+<td class="ref">neutral-700 <span class="num">#66655F</span></td>
+<td class="use">Card and panel edges; decorative only</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-border-strong)"></span></td>
+<td class="tok">--color-border-strong</td>
+<td class="ref">neutral-600 <span class="num">#7D7C76</span></td>
+<td class="ref">neutral-400 <span class="num">#AEACA6</span></td>
+<td class="use">Outlines an interactive control; the only border token that clears 3:1</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-border-brand)"></span></td>
+<td class="tok">--color-border-brand</td>
+<td class="ref">ultramarine-700 <span class="num">#3046C5</span></td>
+<td class="ref">ultramarine-500 <span class="num">#6D8CF3</span></td>
+<td class="use">Selected and active edges</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Brand - ultramarine</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-default)"></span></td>
+<td class="tok">--color-brand-default</td>
+<td class="ref">ultramarine-700 <span class="num">#3046C5</span></td>
+<td class="ref">ultramarine-500 <span class="num">#6D8CF3</span></td>
+<td class="use">Primary buttons, active nav</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-hover)"></span></td>
+<td class="tok">--color-brand-hover</td>
+<td class="ref">ultramarine-800 <span class="num">#293DB1</span></td>
+<td class="ref">ultramarine-400 <span class="num">#8CA8FD</span></td>
+<td class="use">Primary hover</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-active)"></span></td>
+<td class="tok">--color-brand-active</td>
+<td class="ref">ultramarine-900 <span class="num">#1A2883</span></td>
+<td class="ref">ultramarine-300 <span class="num">#B1C6FF</span></td>
+<td class="use">Primary pressed</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-subtle)"></span></td>
+<td class="tok">--color-brand-subtle</td>
+<td class="ref">ultramarine-50 <span class="num">#F3F7FF</span></td>
+<td class="ref">ultramarine-950 <span class="num">#0E175C</span></td>
+<td class="use">Tinted brand background</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-subtle-hover)"></span></td>
+<td class="tok">--color-brand-subtle-hover</td>
+<td class="ref">ultramarine-100 <span class="num">#E6EDFF</span></td>
+<td class="ref">ultramarine-900 <span class="num">#1A2883</span></td>
+<td class="use">Tinted brand background, hovered</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-muted)"></span></td>
+<td class="tok">--color-brand-muted</td>
+<td class="ref">ultramarine-200 <span class="num">#CFDCFF</span></td>
+<td class="ref">ultramarine-800 <span class="num">#293DB1</span></td>
+<td class="use">Brand background sitting behind text</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-brand-disabled)"></span></td>
+<td class="tok">--color-brand-disabled</td>
+<td class="ref">ultramarine-200 <span class="num">#CFDCFF</span></td>
+<td class="ref">ultramarine-900 <span class="num">#1A2883</span></td>
+<td class="use">Disabled primary fill</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Accent - orange</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-accent-default)"></span></td>
+<td class="tok">--color-accent-default</td>
+<td class="ref">orange-500 <span class="num">#FF5A1F</span></td>
+<td class="ref">orange-400 <span class="num">#FF845F</span></td>
+<td class="use">Highlights, badges, emphasis</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-accent-hover)"></span></td>
+<td class="tok">--color-accent-hover</td>
+<td class="ref">orange-400 <span class="num">#FF845F</span></td>
+<td class="ref">orange-300 <span class="num">#FFB19A</span></td>
+<td class="use">Accent hover; brightens rather than darkens</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-accent-active)"></span></td>
+<td class="tok">--color-accent-active</td>
+<td class="ref">orange-300 <span class="num">#FFB19A</span></td>
+<td class="ref">orange-200 <span class="num">#FFD0C2</span></td>
+<td class="use">Accent pressed; brightens rather than darkens</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-accent-subtle)"></span></td>
+<td class="tok">--color-accent-subtle</td>
+<td class="ref">orange-50 <span class="num">#FFF4F1</span></td>
+<td class="ref">orange-950 <span class="num">#420E00</span></td>
+<td class="use">Tinted accent background</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-accent-subtle-hover)"></span></td>
+<td class="tok">--color-accent-subtle-hover</td>
+<td class="ref">orange-100 <span class="num">#FFE7DF</span></td>
+<td class="ref">orange-900 <span class="num">#631900</span></td>
+<td class="use">Tinted accent background, hovered</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-accent-muted)"></span></td>
+<td class="tok">--color-accent-muted</td>
+<td class="ref">orange-200 <span class="num">#FFD0C2</span></td>
+<td class="ref">orange-800 <span class="num">#8A2700</span></td>
+<td class="use">Accent background sitting behind text</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Shading</caption>
+<tr><th></th><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr>
+<td><span class="dot" style="background:var(--color-shadow-ambient)"></span></td>
+<td class="tok">--color-shadow-ambient</td>
+<td class="ref">--color-shadow-6</td>
+<td class="ref">--color-shadow-16</td>
+<td class="use">Wide, soft shadow layer</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-shadow-key)"></span></td>
+<td class="tok">--color-shadow-key</td>
+<td class="ref">--color-shadow-12</td>
+<td class="ref">--color-shadow-24</td>
+<td class="use">Tight, directional shadow layer</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-scrim)"></span></td>
+<td class="tok">--color-scrim</td>
+<td class="ref">--color-scrim-60</td>
+<td class="ref">--color-scrim-80</td>
+<td class="use">Backdrop behind modals</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-overlay-hover)"></span></td>
+<td class="tok">--color-overlay-hover</td>
+<td class="ref">--color-shadow-4</td>
+<td class="ref">--color-highlight-8</td>
+<td class="use">Wash laid over any surface on hover</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-overlay-active)"></span></td>
+<td class="tok">--color-overlay-active</td>
+<td class="ref">--color-shadow-8</td>
+<td class="ref">--color-highlight-16</td>
+<td class="use">Wash laid over any surface on press</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-bevel-highlight)"></span></td>
+<td class="tok">--color-bevel-highlight</td>
+<td class="ref">--color-highlight-16</td>
+<td class="ref">--color-highlight-8</td>
+<td class="use">Top-edge highlight on raised elements</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-focus-ring)"></span></td>
+<td class="tok">--color-focus-ring</td>
+<td class="ref">--color-ultramarine-24</td>
+<td class="ref">--color-ultramarine-24</td>
+<td class="use">Focus halo</td>
+</tr>
+<tr>
+<td><span class="dot" style="background:var(--color-selection)"></span></td>
+<td class="tok">--color-selection</td>
+<td class="ref">--color-ultramarine-12</td>
+<td class="ref">--color-ultramarine-24</td>
+<td class="use">Selected text and rows</td>
+</tr>
+</table></div>
+</section>
+<section id="shading"><div class="section-head">
+<span class="eyebrow">03 · Shading</span>
+<h2>Darkening and lightening</h2>
+<p class="prose">Shading is transparent, never flat. A shadow or a hover wash has to sit over a surface whose colour it does not know — a solid ramp step would hide what is beneath it instead of shading it. Elements with their own fill step along the ramp (<span class="tok">--color-brand-hover</span>); elements without one take a wash (<span class="tok">--color-overlay-hover</span>).</p>
+</div>
+<div class="elevation">
+<div class="card" style="box-shadow:var(--shadow-xs)">--shadow-xs</div>
+<div class="card" style="box-shadow:var(--shadow-sm)">--shadow-sm</div>
+<div class="card" style="box-shadow:var(--shadow-md)">--shadow-md</div>
+<div class="card" style="box-shadow:var(--shadow-lg)">--shadow-lg</div>
+<div class="card" style="box-shadow:var(--shadow-xl)">--shadow-xl</div>
+</div>
+<div class="grid-2" style="margin-top:26px">
+<div class="panel"><h3>Washes over a surface</h3>
+<div class="row">
+<button class="btn btn-ghost" type="button">Hover and press me</button>
+<span class="tag brand">brand-muted</span>
+<span class="tag accent">accent-muted</span>
+</div>
+<p class="use" style="font-size:13px">The ghost button has no fill of its own, so its states come from <span class="tok">--color-overlay-hover</span> and <span class="tok">--color-overlay-active</span>.</p>
+</div>
+<div class="panel" style="padding:0;border:0">
+<div class="scrim-demo"><div class="under">Content behind a modal backdrop. The scrim dims what is underneath rather than covering it, so the reader keeps their place while the dialog has focus.</div><div class="over">--color-scrim</div></div>
+</div>
+</div></section>
+<section id="components"><div class="section-head">
+<span class="eyebrow">04 · In use</span>
+<h2>The tokens under load</h2>
+<p class="prose">Every state below is a token, not a hand-picked value. Note that the accent fill brightens on interaction rather than darkening: <span class="tok">#FF5A1F</span> sits high enough on the lightness axis that it takes a dark label, and darkening it would drop that label below 4.5:1.</p>
+</div>
+<div class="grid-2">
+<div class="panel"><h3>Brand — steps down the ramp</h3><div class="row">
+<button class="btn btn-brand" type="button">Default</button>
+<span class="btn btn-brand h">Hover</span>
+<span class="btn btn-brand a">Pressed</span>
+<span class="btn btn-brand d">Disabled</span>
+</div>
+<div class="row"><button class="btn btn-brand btn-live" type="button">Live — tab to me for the focus ring</button></div>
+</div>
+<div class="panel"><h3>Accent — steps up the ramp</h3><div class="row">
+<button class="btn btn-accent" type="button">Default</button>
+<span class="btn btn-accent h">Hover</span>
+<span class="btn btn-accent a">Pressed</span>
+</div>
+<p class="use" style="font-size:13px">Dark label throughout, so the fill has to get lighter to stay readable.</p></div>
+<div class="panel"><h3>Control outlines</h3>
+<input class="field" placeholder="border-strong — the only border clearing 3:1">
+<p class="use" style="font-size:13px">border-subtle and border-default are decorative. Anything outlining a control uses border-strong.</p></div>
+<div class="panel"><h3>Text and marks</h3>
+<p class="prose" style="font-size:16px;color:var(--color-text-primary)">Body copy in <span class="tok">text-primary</span>, a <a class="link" href="#semantic">link</a> in text-brand, and <span style="color:var(--color-text-accent)">accent text</span> for emphasis. Select this line to see the selection token.</p>
+<div class="row"><span class="tooltip">Tooltip on bg-inverse</span><span class="use" style="font-size:13px">text-secondary</span><span style="color:var(--color-text-tertiary);font-size:13px">text-tertiary</span><span style="color:var(--color-text-disabled);font-size:13px">text-disabled</span></div>
+</div>
+</div></section>
+<section id="contrast"><div class="section-head">
+<span class="eyebrow">05 · Accessibility</span>
+<h2>The audit</h2>
+<p class="prose">Every pairing a component will actually use, checked in both themes. All 58 enforced pairings clear WCAG AA — 4.5:1 for text, 3:1 for control boundaries. <span class="tok">scripts/check_contrast.py</span> exits non-zero on a failure, so a token change that breaks one cannot ship quietly.</p>
+</div>
+<div class="tbl-scroll"><table>
+<caption>Enforced pairings</caption>
+<tr><th>Foreground</th><th>Background</th><th>Min</th><th>Light</th><th>Dark</th><th>Where</th></tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">bg-canvas</td>
+<td class="num">4.5</td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="use">body copy on the page</td>
+</tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">bg-subtle</td>
+<td class="num">4.5</td>
+<td class="num">15.15 <span class="pill pass">pass</span></td>
+<td class="num">11.71 <span class="pill pass">pass</span></td>
+<td class="use">body copy in a recessed area</td>
+</tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">surface-default</td>
+<td class="num">4.5</td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="num">11.71 <span class="pill pass">pass</span></td>
+<td class="use">body copy on a card</td>
+</tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">surface-raised</td>
+<td class="num">4.5</td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="num">8.16 <span class="pill pass">pass</span></td>
+<td class="use">body copy in a menu</td>
+</tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">surface-sunken</td>
+<td class="num">4.5</td>
+<td class="num">15.15 <span class="pill pass">pass</span></td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="use">body copy in a well</td>
+</tr>
+<tr>
+<td class="tok">text-secondary</td><td class="tok">bg-canvas</td>
+<td class="num">4.5</td>
+<td class="num">8.16 <span class="pill pass">pass</span></td>
+<td class="num">10.51 <span class="pill pass">pass</span></td>
+<td class="use">labels on the page</td>
+</tr>
+<tr>
+<td class="tok">text-secondary</td><td class="tok">surface-default</td>
+<td class="num">4.5</td>
+<td class="num">8.16 <span class="pill pass">pass</span></td>
+<td class="num">7.05 <span class="pill pass">pass</span></td>
+<td class="use">labels on a card</td>
+</tr>
+<tr>
+<td class="tok">text-tertiary</td><td class="tok">bg-canvas</td>
+<td class="num">4.5</td>
+<td class="num">5.74 <span class="pill pass">pass</span></td>
+<td class="num">7.82 <span class="pill pass">pass</span></td>
+<td class="use">captions on the page</td>
+</tr>
+<tr>
+<td class="tok">text-tertiary</td><td class="tok">surface-default</td>
+<td class="num">4.5</td>
+<td class="num">5.74 <span class="pill pass">pass</span></td>
+<td class="num">5.25 <span class="pill pass">pass</span></td>
+<td class="use">captions on a card</td>
+</tr>
+<tr>
+<td class="tok">text-inverse</td><td class="tok">bg-inverse</td>
+<td class="num">4.5</td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="num">17.45 <span class="pill pass">pass</span></td>
+<td class="use">tooltip text</td>
+</tr>
+<tr>
+<td class="tok">text-brand</td><td class="tok">bg-canvas</td>
+<td class="num">4.5</td>
+<td class="num">7.35 <span class="pill pass">pass</span></td>
+<td class="num">7.72 <span class="pill pass">pass</span></td>
+<td class="use">links on the page</td>
+</tr>
+<tr>
+<td class="tok">text-brand</td><td class="tok">surface-default</td>
+<td class="num">4.5</td>
+<td class="num">7.35 <span class="pill pass">pass</span></td>
+<td class="num">5.18 <span class="pill pass">pass</span></td>
+<td class="use">links on a card</td>
+</tr>
+<tr>
+<td class="tok">text-brand</td><td class="tok">brand-subtle</td>
+<td class="num">4.5</td>
+<td class="num">6.97 <span class="pill pass">pass</span></td>
+<td class="num">7.05 <span class="pill pass">pass</span></td>
+<td class="use">links inside a tinted brand panel</td>
+</tr>
+<tr>
+<td class="tok">text-accent</td><td class="tok">bg-canvas</td>
+<td class="num">4.5</td>
+<td class="num">6.23 <span class="pill pass">pass</span></td>
+<td class="num">7.37 <span class="pill pass">pass</span></td>
+<td class="use">accent text on the page</td>
+</tr>
+<tr>
+<td class="tok">text-accent</td><td class="tok">accent-subtle</td>
+<td class="num">4.5</td>
+<td class="num">5.87 <span class="pill pass">pass</span></td>
+<td class="num">6.73 <span class="pill pass">pass</span></td>
+<td class="use">accent text inside a tinted panel</td>
+</tr>
+<tr>
+<td class="tok">text-on-brand</td><td class="tok">brand-default</td>
+<td class="num">4.5</td>
+<td class="num">7.35 <span class="pill pass">pass</span></td>
+<td class="num">5.66 <span class="pill pass">pass</span></td>
+<td class="use">primary button label</td>
+</tr>
+<tr>
+<td class="tok">text-on-brand</td><td class="tok">brand-hover</td>
+<td class="num">4.5</td>
+<td class="num">8.61 <span class="pill pass">pass</span></td>
+<td class="num">7.72 <span class="pill pass">pass</span></td>
+<td class="use">primary button label, hovered</td>
+</tr>
+<tr>
+<td class="tok">text-on-brand</td><td class="tok">brand-active</td>
+<td class="num">4.5</td>
+<td class="num">12.32 <span class="pill pass">pass</span></td>
+<td class="num">10.48 <span class="pill pass">pass</span></td>
+<td class="use">primary button label, pressed</td>
+</tr>
+<tr>
+<td class="tok">text-on-accent</td><td class="tok">accent-default</td>
+<td class="num">4.5</td>
+<td class="num">5.69 <span class="pill pass">pass</span></td>
+<td class="num">7.37 <span class="pill pass">pass</span></td>
+<td class="use">accent button label</td>
+</tr>
+<tr>
+<td class="tok">text-on-accent</td><td class="tok">accent-hover</td>
+<td class="num">4.5</td>
+<td class="num">7.37 <span class="pill pass">pass</span></td>
+<td class="num">10.15 <span class="pill pass">pass</span></td>
+<td class="use">accent button label, hovered</td>
+</tr>
+<tr>
+<td class="tok">text-on-accent</td><td class="tok">accent-active</td>
+<td class="num">4.5</td>
+<td class="num">10.15 <span class="pill pass">pass</span></td>
+<td class="num">12.73 <span class="pill pass">pass</span></td>
+<td class="use">accent button label, pressed</td>
+</tr>
+<tr>
+<td class="tok">border-strong</td><td class="tok">bg-canvas</td>
+<td class="num">3.0</td>
+<td class="num">4.11 <span class="pill pass">pass</span></td>
+<td class="num">7.82 <span class="pill pass">pass</span></td>
+<td class="use">control outline on the page</td>
+</tr>
+<tr>
+<td class="tok">border-strong</td><td class="tok">surface-default</td>
+<td class="num">3.0</td>
+<td class="num">4.11 <span class="pill pass">pass</span></td>
+<td class="num">5.25 <span class="pill pass">pass</span></td>
+<td class="use">control outline on a card</td>
+</tr>
+<tr>
+<td class="tok">border-strong</td><td class="tok">surface-raised</td>
+<td class="num">3.0</td>
+<td class="num">4.11 <span class="pill pass">pass</span></td>
+<td class="num">3.66 <span class="pill pass">pass</span></td>
+<td class="use">control outline in a menu</td>
+</tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">brand-muted</td>
+<td class="num">4.5</td>
+<td class="num">12.97 <span class="pill pass">pass</span></td>
+<td class="num">8.61 <span class="pill pass">pass</span></td>
+<td class="use">text on a brand-tinted chip</td>
+</tr>
+<tr>
+<td class="tok">text-primary</td><td class="tok">accent-muted</td>
+<td class="num">4.5</td>
+<td class="num">12.73 <span class="pill pass">pass</span></td>
+<td class="num">8.70 <span class="pill pass">pass</span></td>
+<td class="use">text on an accent-tinted chip</td>
+</tr>
+<tr>
+<td class="tok">border-brand</td><td class="tok">bg-canvas</td>
+<td class="num">3.0</td>
+<td class="num">7.35 <span class="pill pass">pass</span></td>
+<td class="num">5.66 <span class="pill pass">pass</span></td>
+<td class="use">selected edge</td>
+</tr>
+<tr>
+<td class="tok">brand-default</td><td class="tok">bg-canvas</td>
+<td class="num">3.0</td>
+<td class="num">7.35 <span class="pill pass">pass</span></td>
+<td class="num">5.66 <span class="pill pass">pass</span></td>
+<td class="use">filled button against the page</td>
+</tr>
+<tr>
+<td class="tok">accent-default</td><td class="tok">bg-canvas</td>
+<td class="num">3.0</td>
+<td class="num">3.06 <span class="pill pass">pass</span></td>
+<td class="num">7.37 <span class="pill pass">pass</span></td>
+<td class="use">filled accent against the page</td>
+</tr>
+</table></div>
+<div class="tbl-scroll"><table>
+<caption>Reported, not enforced — decorative edges and deliberately dimmed text</caption>
+<tr><th>Foreground</th><th>Background</th><th>Light</th><th>Dark</th><th>Why</th></tr>
+<tr>
+<td class="tok">border-subtle</td><td class="tok">bg-canvas</td>
+<td class="num">1.35 <span class="pill info">n/a</span></td>
+<td class="num">2.14 <span class="pill info">n/a</span></td>
+<td class="use">divider on the page</td>
+</tr>
+<tr>
+<td class="tok">border-default</td><td class="tok">bg-canvas</td>
+<td class="num">1.66 <span class="pill info">n/a</span></td>
+<td class="num">3.04 <span class="pill info">n/a</span></td>
+<td class="use">card edge on the page</td>
+</tr>
+<tr>
+<td class="tok">border-default</td><td class="tok">surface-default</td>
+<td class="num">1.66 <span class="pill info">n/a</span></td>
+<td class="num">2.04 <span class="pill info">n/a</span></td>
+<td class="use">edge on a card</td>
+</tr>
+<tr>
+<td class="tok">text-disabled</td><td class="tok">bg-canvas</td>
+<td class="num">2.99 <span class="pill info">n/a</span></td>
+<td class="num">4.24 <span class="pill info">n/a</span></td>
+<td class="use">disabled text; below AA by design</td>
+</tr>
+</table></div>
+<p class="prose" style="margin-top:24px">Status colours — success, error, warning — are deliberately unassigned. The palette has no green and no red, and overloading orange onto both warning and error would make two states that must never be confusable look identical.</p>
+</section>
+<footer>
+<span>Generated from scripts/generate_color_tokens.py. Edit the generator, never the outputs.</span>
+<span class="mono" style="font-size:12px">tokens/color.css · tokens/color.json · docs/design-system.md</span>
+</footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var label = document.getElementById('theme-label');
+  function current() {
+    var set = root.getAttribute('data-theme');
+    if (set) return set;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function paint() { label.textContent = current() === 'dark' ? 'Dark' : 'Light'; }
+  btn.addEventListener('click', function () {
+    root.setAttribute('data-theme', current() === 'dark' ? 'light' : 'dark');
+    paint();
+  });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paint);
+  paint();
+})();
+</script>

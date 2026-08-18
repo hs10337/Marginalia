@@ -348,3 +348,15 @@ build outputs — editing them by hand gets your change overwritten. Edit
 python3 scripts/generate_color_tokens.py   # regenerate
 python3 scripts/check_contrast.py          # audit; must exit 0
 ```
+
+## Preview
+
+`preview/colors.html` is a live reference for the whole system — ramps as an
+aligned matrix, the semantic vocabulary resolving in real time, shading demos,
+and the contrast audit — with a theme toggle. It is generated from the same
+source as the tokens and is itself built entirely out of them, so a broken token
+shows up on the page:
+
+```sh
+python3 scripts/build_preview.py
+```
