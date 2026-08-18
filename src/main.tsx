@@ -9,8 +9,10 @@ import InboxScreen from './screens/InboxScreen';
 import ChatScreen from './screens/ChatScreen';
 import PeopleScreen from './screens/PeopleScreen';
 import PersonScreen from './screens/PersonScreen';
+import DesignSystem from './pages/DesignSystem';
 
 const router = createBrowserRouter([
+  { path: '/design-system', element: <DesignSystem /> },
   {
     path: '/',
     element: <App />,

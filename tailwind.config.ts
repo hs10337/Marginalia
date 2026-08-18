@@ -5,6 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Mimir brand tokens
+        mimir: {
+          bg: '#F7F6F2',
+          ink: '#181818',
+          blue: '#3046C5',
+          orange: '#FF5A1F',
+        },
+        // Existing prototype tokens (kept for the Noted-style app screens)
         cream: {
           50: '#FBF7EE',
           100: '#F6EFE2',
@@ -27,6 +35,7 @@ export default {
       fontFamily: {
         serif: ['Fraunces', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Instrument Sans"', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         paper: '0 1px 0 rgba(27,26,23,0.04), 0 6px 18px -10px rgba(27,26,23,0.18)',
