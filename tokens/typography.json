@@ -1,0 +1,220 @@
+{
+  "$description": "Marginalia typography tokens. Single source of truth for iOS and web. Sizes are authored iOS-first (pt); web values are derived and stated explicitly where they diverge.",
+  "$version": "1.0.0",
+
+  "family": {
+    "sans": {
+      "$value": "Instrument Sans",
+      "$description": "UI voice: chrome, navigation, controls, metadata.",
+      "ios": {
+        "postScript": {
+          "regular": "InstrumentSans-Regular",
+          "medium": "InstrumentSans-Medium",
+          "semibold": "InstrumentSans-SemiBold",
+          "bold": "InstrumentSans-Bold",
+          "italic": "InstrumentSans-Italic",
+          "mediumItalic": "InstrumentSans-MediumItalic",
+          "semiboldItalic": "InstrumentSans-SemiBoldItalic",
+          "boldItalic": "InstrumentSans-BoldItalic"
+        }
+      },
+      "web": {
+        "stack": "\"Instrument Sans\", ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+        "variableAxes": { "wght": [400, 700], "wdth": [75, 100] }
+      }
+    },
+    "serif": {
+      "$value": "Newsreader",
+      "$description": "Editorial voice: long-form reading, book content, quotes, annotations.",
+      "ios": {
+        "postScript": {
+          "regular": "Newsreader-Regular",
+          "medium": "Newsreader-Medium",
+          "semibold": "Newsreader-SemiBold",
+          "bold": "Newsreader-Bold",
+          "italic": "Newsreader-Italic",
+          "mediumItalic": "Newsreader-MediumItalic",
+          "semiboldItalic": "Newsreader-SemiBoldItalic",
+          "boldItalic": "Newsreader-BoldItalic"
+        }
+      },
+      "web": {
+        "stack": "Newsreader, ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+        "variableAxes": { "wght": [200, 800], "opsz": [6, 72] }
+      }
+    }
+  },
+
+  "weight": {
+    "regular":  { "$value": 400 },
+    "medium":   { "$value": 500 },
+    "semibold": { "$value": 600 },
+    "bold":     { "$value": 700 }
+  },
+
+  "tracking": {
+    "$description": "Letter-spacing. iOS values are pt at the style's own size; web values are em so they scale.",
+    "tighter": { "ios": -0.6, "web": -0.022 },
+    "tight":   { "ios": -0.4, "web": -0.015 },
+    "snug":    { "ios": -0.2, "web": -0.008 },
+    "normal":  { "ios": 0,    "web": 0 },
+    "loose":   { "ios": 0.2,  "web": 0.012 },
+    "wide":    { "ios": 0.8,  "web": 0.06 }
+  },
+
+  "scale": {
+    "$description": "Semantic styles. `ios` sizes are pt with an explicit line height in pt and a Dynamic Type anchor. `web` sizes are px (converted to rem on output); when min differs from max the style is fluid across the viewport range.",
+
+    "editorial.display": {
+      "$description": "Cover-level title on a book or collection screen.",
+      "family": "serif", "weight": "regular", "tracking": "tight",
+      "ios": { "size": 40, "lineHeight": 46, "textStyle": "largeTitle", "opticalSize": 36 },
+      "web": { "min": 40, "max": 60, "lineHeight": 1.1 }
+    },
+    "editorial.title": {
+      "$description": "Title of a work, essay, or entry.",
+      "family": "serif", "weight": "regular", "tracking": "snug",
+      "ios": { "size": 32, "lineHeight": 38, "textStyle": "title1", "opticalSize": 28 },
+      "web": { "min": 32, "max": 44, "lineHeight": 1.15 }
+    },
+    "editorial.heading": {
+      "$description": "Chapter or section heading inside reading content.",
+      "family": "serif", "weight": "medium", "tracking": "snug",
+      "ios": { "size": 24, "lineHeight": 30, "textStyle": "title2", "opticalSize": 22 },
+      "web": { "min": 24, "max": 30, "lineHeight": 1.25 }
+    },
+    "editorial.subheading": {
+      "$description": "Sub-section heading inside reading content.",
+      "family": "serif", "weight": "medium", "tracking": "normal",
+      "ios": { "size": 20, "lineHeight": 27, "textStyle": "title3", "opticalSize": 18 },
+      "web": { "min": 20, "max": 24, "lineHeight": 1.3 }
+    },
+    "editorial.bodyLarge": {
+      "$description": "Reading body at the largest comfortable measure.",
+      "family": "serif", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 20, "lineHeight": 32, "textStyle": "body", "opticalSize": 16 },
+      "web": { "min": 20, "max": 22, "lineHeight": 1.65 }
+    },
+    "editorial.body": {
+      "$description": "Default long-form reading body.",
+      "family": "serif", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 18, "lineHeight": 29, "textStyle": "body", "opticalSize": 14 },
+      "web": { "min": 18, "max": 19, "lineHeight": 1.7 }
+    },
+    "editorial.bodySmall": {
+      "$description": "Compact reading body — previews, dense excerpt lists.",
+      "family": "serif", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 16, "lineHeight": 26, "textStyle": "callout", "opticalSize": 12 },
+      "web": { "min": 16, "max": 17, "lineHeight": 1.65 }
+    },
+    "editorial.quote": {
+      "$description": "Pull quote or highlighted passage.",
+      "family": "serif", "weight": "regular", "tracking": "normal",
+      "italic": true,
+      "ios": { "size": 20, "lineHeight": 31, "textStyle": "body", "opticalSize": 16 },
+      "web": { "min": 20, "max": 24, "lineHeight": 1.55 }
+    },
+    "editorial.note": {
+      "$description": "The margin note itself — a reader's annotation next to the text.",
+      "family": "serif", "weight": "regular", "tracking": "normal",
+      "italic": true,
+      "ios": { "size": 15, "lineHeight": 23, "textStyle": "subheadline", "opticalSize": 12 },
+      "web": { "min": 15, "max": 16, "lineHeight": 1.55 }
+    },
+    "editorial.caption": {
+      "$description": "Attribution, citation, source line under editorial content.",
+      "family": "serif", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 14, "lineHeight": 20, "textStyle": "footnote", "opticalSize": 10 },
+      "web": { "min": 14, "max": 15, "lineHeight": 1.5 }
+    },
+
+    "ui.display": {
+      "$description": "Large screen title, e.g. a scrolled-to-top nav title.",
+      "family": "sans", "weight": "semibold", "tracking": "tighter",
+      "ios": { "size": 34, "lineHeight": 41, "textStyle": "largeTitle" },
+      "web": { "min": 34, "max": 44, "lineHeight": 1.15 }
+    },
+    "ui.title1": {
+      "family": "sans", "weight": "semibold", "tracking": "tight",
+      "ios": { "size": 28, "lineHeight": 34, "textStyle": "title1" },
+      "web": { "min": 28, "max": 32, "lineHeight": 1.2 }
+    },
+    "ui.title2": {
+      "family": "sans", "weight": "semibold", "tracking": "snug",
+      "ios": { "size": 22, "lineHeight": 28, "textStyle": "title2" },
+      "web": { "min": 22, "max": 24, "lineHeight": 1.25 }
+    },
+    "ui.title3": {
+      "family": "sans", "weight": "semibold", "tracking": "snug",
+      "ios": { "size": 20, "lineHeight": 25, "textStyle": "title3" },
+      "web": { "min": 20, "max": 20, "lineHeight": 1.3 }
+    },
+    "ui.headline": {
+      "$description": "Row title, card title — the emphasised sibling of ui.body.",
+      "family": "sans", "weight": "semibold", "tracking": "normal",
+      "ios": { "size": 17, "lineHeight": 22, "textStyle": "headline" },
+      "web": { "min": 17, "max": 17, "lineHeight": 1.35 }
+    },
+    "ui.body": {
+      "$description": "Default interface text.",
+      "family": "sans", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 17, "lineHeight": 24, "textStyle": "body" },
+      "web": { "min": 16, "max": 17, "lineHeight": 1.5 }
+    },
+    "ui.bodyEmphasis": {
+      "family": "sans", "weight": "medium", "tracking": "normal",
+      "ios": { "size": 17, "lineHeight": 24, "textStyle": "body" },
+      "web": { "min": 16, "max": 17, "lineHeight": 1.5 }
+    },
+    "ui.callout": {
+      "family": "sans", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 16, "lineHeight": 21, "textStyle": "callout" },
+      "web": { "min": 16, "max": 16, "lineHeight": 1.45 }
+    },
+    "ui.subhead": {
+      "$description": "Secondary row text, supporting copy.",
+      "family": "sans", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 15, "lineHeight": 20, "textStyle": "subheadline" },
+      "web": { "min": 15, "max": 15, "lineHeight": 1.45 }
+    },
+    "ui.footnote": {
+      "family": "sans", "weight": "regular", "tracking": "normal",
+      "ios": { "size": 13, "lineHeight": 18, "textStyle": "footnote" },
+      "web": { "min": 13, "max": 13, "lineHeight": 1.45 }
+    },
+    "ui.caption": {
+      "$description": "Timestamps, counts, metadata.",
+      "family": "sans", "weight": "regular", "tracking": "loose",
+      "ios": { "size": 12, "lineHeight": 16, "textStyle": "caption1" },
+      "web": { "min": 12, "max": 12, "lineHeight": 1.4 }
+    },
+    "ui.captionSmall": {
+      "family": "sans", "weight": "medium", "tracking": "loose",
+      "ios": { "size": 11, "lineHeight": 14, "textStyle": "caption2" },
+      "web": { "min": 11, "max": 11, "lineHeight": 1.35 }
+    },
+    "ui.overline": {
+      "$description": "All-caps section label above a group.",
+      "family": "sans", "weight": "semibold", "tracking": "wide",
+      "uppercase": true,
+      "ios": { "size": 11, "lineHeight": 14, "textStyle": "caption2" },
+      "web": { "min": 11, "max": 12, "lineHeight": 1.35 }
+    },
+    "ui.button": {
+      "family": "sans", "weight": "semibold", "tracking": "normal",
+      "ios": { "size": 17, "lineHeight": 22, "textStyle": "body" },
+      "web": { "min": 16, "max": 16, "lineHeight": 1.25 }
+    },
+    "ui.tabLabel": {
+      "family": "sans", "weight": "medium", "tracking": "loose",
+      "ios": { "size": 10, "lineHeight": 12, "textStyle": "caption2" },
+      "web": { "min": 12, "max": 12, "lineHeight": 1.2 }
+    }
+  },
+
+  "fluid": {
+    "$description": "Viewport range used to interpolate web styles whose min and max differ.",
+    "minViewport": 375,
+    "maxViewport": 1280
+  }
+}
