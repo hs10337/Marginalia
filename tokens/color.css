@@ -1,0 +1,273 @@
+/*
+ * Marginalia - colour tokens
+ *
+ * GENERATED FILE. Edit scripts/generate_color_tokens.py and re-run
+ * `python3 scripts/generate_color_tokens.py`; do not edit this by hand.
+ *
+ * Layer 1 (primitives) is the palette: every ramp step, named by hue and
+ * weight. Components must never reference these directly.
+ * Layer 2 (semantic) is the vocabulary: what a colour is *for*. Components
+ * reference only these, which is what lets the theme swap underneath without
+ * a single component changing.
+ */
+
+:root {
+  /* ---- Primitives: ramps ---- */
+
+  /* neutral */
+  --color-neutral-50: #FEFDF9;
+  --color-neutral-100: #EEEDE8;
+  --color-neutral-200: #DEDCD7;
+  --color-neutral-300: #C9C7C2;
+  --color-neutral-400: #AEACA6;
+  --color-neutral-500: #95948E;
+  --color-neutral-600: #7D7C76;
+  --color-neutral-700: #66655F;
+  --color-neutral-800: #504E4A;
+  --color-neutral-900: #383733;
+  --color-neutral-950: #181818;
+
+  /* ultramarine */
+  --color-ultramarine-50: #F3F7FF;
+  --color-ultramarine-100: #E6EDFF;
+  --color-ultramarine-200: #CFDCFF;
+  --color-ultramarine-300: #B1C6FF;
+  --color-ultramarine-400: #8CA8FD;
+  --color-ultramarine-500: #6D8CF3;
+  --color-ultramarine-600: #5270E5;
+  --color-ultramarine-700: #3046C5;
+  --color-ultramarine-800: #293DB1;
+  --color-ultramarine-900: #1A2883;
+  --color-ultramarine-950: #0E175C;
+
+  /* orange */
+  --color-orange-50: #FFF4F1;
+  --color-orange-100: #FFE7DF;
+  --color-orange-200: #FFD0C2;
+  --color-orange-300: #FFB19A;
+  --color-orange-400: #FF845F;
+  --color-orange-500: #FF5A1F;
+  --color-orange-600: #D54201;
+  --color-orange-700: #AF3400;
+  --color-orange-800: #8A2700;
+  --color-orange-900: #631900;
+  --color-orange-950: #420E00;
+
+  /* ---- Primitives: transparent shades ---- */
+  --color-shadow-4: rgba(24, 24, 24, 0.04);
+  --color-shadow-6: rgba(24, 24, 24, 0.06);
+  --color-shadow-8: rgba(24, 24, 24, 0.08);
+  --color-shadow-12: rgba(24, 24, 24, 0.12);
+  --color-shadow-16: rgba(24, 24, 24, 0.16);
+  --color-shadow-24: rgba(24, 24, 24, 0.24);
+  --color-scrim-40: rgba(24, 24, 24, 0.4);
+  --color-scrim-60: rgba(24, 24, 24, 0.6);
+  --color-scrim-80: rgba(24, 24, 24, 0.8);
+  --color-highlight-8: rgba(254, 253, 249, 0.08);
+  --color-highlight-16: rgba(254, 253, 249, 0.16);
+  --color-highlight-24: rgba(254, 253, 249, 0.24);
+  --color-ultramarine-8: rgba(48, 70, 197, 0.08);
+  --color-ultramarine-12: rgba(48, 70, 197, 0.12);
+  --color-ultramarine-24: rgba(48, 70, 197, 0.24);
+  --color-orange-8: rgba(255, 90, 31, 0.08);
+  --color-orange-12: rgba(255, 90, 31, 0.12);
+  --color-orange-24: rgba(255, 90, 31, 0.24);
+
+  /* ---- Source-colour aliases ---- */
+  --color-light: var(--color-neutral-50);
+  --color-dark: var(--color-neutral-950);
+  --color-ultramarine: var(--color-ultramarine-700);
+  --color-orange: var(--color-orange-500);
+}
+
+/* ==== Semantic tokens - light theme (default) ==== */
+:root,
+[data-theme="light"] {
+
+  /* Backgrounds */
+  --color-bg-canvas: var(--color-neutral-50);
+  --color-bg-subtle: var(--color-neutral-100);
+  --color-bg-muted: var(--color-neutral-200);
+  --color-bg-inverse: var(--color-neutral-950);
+
+  /* Surfaces */
+  --color-surface-default: var(--color-neutral-50);
+  --color-surface-raised: var(--color-neutral-50);
+  --color-surface-sunken: var(--color-neutral-100);
+  --color-surface-overlay: var(--color-neutral-50);
+
+  /* Text */
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-800);
+  --color-text-tertiary: var(--color-neutral-700);
+  --color-text-disabled: var(--color-neutral-500);
+  --color-text-inverse: var(--color-neutral-50);
+  --color-text-on-brand: var(--color-neutral-50);
+  --color-text-on-accent: var(--color-neutral-950);
+  --color-text-brand: var(--color-ultramarine-700);
+  --color-text-accent: var(--color-orange-700);
+
+  /* Borders */
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-default: var(--color-neutral-300);
+  --color-border-strong: var(--color-neutral-600);
+  --color-border-brand: var(--color-ultramarine-700);
+
+  /* Brand - ultramarine */
+  --color-brand-default: var(--color-ultramarine-700);
+  --color-brand-hover: var(--color-ultramarine-800);
+  --color-brand-active: var(--color-ultramarine-900);
+  --color-brand-subtle: var(--color-ultramarine-50);
+  --color-brand-subtle-hover: var(--color-ultramarine-100);
+  --color-brand-muted: var(--color-ultramarine-200);
+  --color-brand-disabled: var(--color-ultramarine-200);
+
+  /* Accent - orange */
+  --color-accent-default: var(--color-orange-500);
+  --color-accent-hover: var(--color-orange-400);
+  --color-accent-active: var(--color-orange-300);
+  --color-accent-subtle: var(--color-orange-50);
+  --color-accent-subtle-hover: var(--color-orange-100);
+  --color-accent-muted: var(--color-orange-200);
+
+  /* Shading */
+  --color-shadow-ambient: var(--color-shadow-6);
+  --color-shadow-key: var(--color-shadow-12);
+  --color-scrim: var(--color-scrim-60);
+  --color-overlay-hover: var(--color-shadow-4);
+  --color-overlay-active: var(--color-shadow-8);
+  --color-bevel-highlight: var(--color-highlight-16);
+  --color-focus-ring: var(--color-ultramarine-24);
+  --color-selection: var(--color-ultramarine-12);
+}
+
+/* ==== Semantic tokens - dark theme ==== */
+[data-theme="dark"] {
+
+  /* Backgrounds */
+  --color-bg-canvas: var(--color-neutral-950);
+  --color-bg-subtle: var(--color-neutral-900);
+  --color-bg-muted: var(--color-neutral-800);
+  --color-bg-inverse: var(--color-neutral-50);
+
+  /* Surfaces */
+  --color-surface-default: var(--color-neutral-900);
+  --color-surface-raised: var(--color-neutral-800);
+  --color-surface-sunken: var(--color-neutral-950);
+  --color-surface-overlay: var(--color-neutral-800);
+
+  /* Text */
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-disabled: var(--color-neutral-600);
+  --color-text-inverse: var(--color-neutral-950);
+  --color-text-on-brand: var(--color-neutral-950);
+  --color-text-on-accent: var(--color-neutral-950);
+  --color-text-brand: var(--color-ultramarine-400);
+  --color-text-accent: var(--color-orange-400);
+
+  /* Borders */
+  --color-border-subtle: var(--color-neutral-800);
+  --color-border-default: var(--color-neutral-700);
+  --color-border-strong: var(--color-neutral-400);
+  --color-border-brand: var(--color-ultramarine-500);
+
+  /* Brand - ultramarine */
+  --color-brand-default: var(--color-ultramarine-500);
+  --color-brand-hover: var(--color-ultramarine-400);
+  --color-brand-active: var(--color-ultramarine-300);
+  --color-brand-subtle: var(--color-ultramarine-950);
+  --color-brand-subtle-hover: var(--color-ultramarine-900);
+  --color-brand-muted: var(--color-ultramarine-800);
+  --color-brand-disabled: var(--color-ultramarine-900);
+
+  /* Accent - orange */
+  --color-accent-default: var(--color-orange-400);
+  --color-accent-hover: var(--color-orange-300);
+  --color-accent-active: var(--color-orange-200);
+  --color-accent-subtle: var(--color-orange-950);
+  --color-accent-subtle-hover: var(--color-orange-900);
+  --color-accent-muted: var(--color-orange-800);
+
+  /* Shading */
+  --color-shadow-ambient: var(--color-shadow-16);
+  --color-shadow-key: var(--color-shadow-24);
+  --color-scrim: var(--color-scrim-80);
+  --color-overlay-hover: var(--color-highlight-8);
+  --color-overlay-active: var(--color-highlight-16);
+  --color-bevel-highlight: var(--color-highlight-8);
+  --color-focus-ring: var(--color-ultramarine-24);
+  --color-selection: var(--color-ultramarine-24);
+}
+
+/* Follow the OS when the page has made no explicit choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+
+    /* Backgrounds */
+    --color-bg-canvas: var(--color-neutral-950);
+    --color-bg-subtle: var(--color-neutral-900);
+    --color-bg-muted: var(--color-neutral-800);
+    --color-bg-inverse: var(--color-neutral-50);
+
+    /* Surfaces */
+    --color-surface-default: var(--color-neutral-900);
+    --color-surface-raised: var(--color-neutral-800);
+    --color-surface-sunken: var(--color-neutral-950);
+    --color-surface-overlay: var(--color-neutral-800);
+
+    /* Text */
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-300);
+    --color-text-tertiary: var(--color-neutral-400);
+    --color-text-disabled: var(--color-neutral-600);
+    --color-text-inverse: var(--color-neutral-950);
+    --color-text-on-brand: var(--color-neutral-950);
+    --color-text-on-accent: var(--color-neutral-950);
+    --color-text-brand: var(--color-ultramarine-400);
+    --color-text-accent: var(--color-orange-400);
+
+    /* Borders */
+    --color-border-subtle: var(--color-neutral-800);
+    --color-border-default: var(--color-neutral-700);
+    --color-border-strong: var(--color-neutral-400);
+    --color-border-brand: var(--color-ultramarine-500);
+
+    /* Brand - ultramarine */
+    --color-brand-default: var(--color-ultramarine-500);
+    --color-brand-hover: var(--color-ultramarine-400);
+    --color-brand-active: var(--color-ultramarine-300);
+    --color-brand-subtle: var(--color-ultramarine-950);
+    --color-brand-subtle-hover: var(--color-ultramarine-900);
+    --color-brand-muted: var(--color-ultramarine-800);
+    --color-brand-disabled: var(--color-ultramarine-900);
+
+    /* Accent - orange */
+    --color-accent-default: var(--color-orange-400);
+    --color-accent-hover: var(--color-orange-300);
+    --color-accent-active: var(--color-orange-200);
+    --color-accent-subtle: var(--color-orange-950);
+    --color-accent-subtle-hover: var(--color-orange-900);
+    --color-accent-muted: var(--color-orange-800);
+
+    /* Shading */
+    --color-shadow-ambient: var(--color-shadow-16);
+    --color-shadow-key: var(--color-shadow-24);
+    --color-scrim: var(--color-scrim-80);
+    --color-overlay-hover: var(--color-highlight-8);
+    --color-overlay-active: var(--color-highlight-16);
+    --color-bevel-highlight: var(--color-highlight-8);
+    --color-focus-ring: var(--color-ultramarine-24);
+    --color-selection: var(--color-ultramarine-24);
+  }
+}
+
+/* ==== Elevation, composed from the shading tokens ==== */
+:root {
+  --shadow-xs: 0 1px 2px 0 var(--color-shadow-ambient);
+  --shadow-sm: 0 1px 2px 0 var(--color-shadow-key), 0 2px 4px -1px var(--color-shadow-ambient);
+  --shadow-md: 0 2px 4px -1px var(--color-shadow-key), 0 6px 12px -2px var(--color-shadow-ambient);
+  --shadow-lg: 0 4px 8px -2px var(--color-shadow-key), 0 12px 24px -4px var(--color-shadow-ambient);
+  --shadow-xl: 0 8px 16px -4px var(--color-shadow-key), 0 24px 48px -8px var(--color-shadow-ambient);
+}
